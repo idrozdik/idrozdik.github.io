@@ -1,10 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<head>2.25= 900
-2.27= 90
-2.29= 8190
-2.31= 7380
-2.33= 7
+<head>
+
   <title>kaktotakoioi</title>
   <style type="text/css">
 .bgrd {width:600px; height:400px; background:#aaa; margin:0 auto; text-align:center;
@@ -64,7 +61,19 @@ z-index:-1;
 </style>
 
 <div class="bgrd">
-<p class="skew" title="тень CSS">тень CSS</p>
+<p class="skew" title=function func(){
+x=document.getElementById("a_znach").value;
+n=(x-x%10)/10+(x%10)*100
+document.getElementById("a").innerHTML ="<h1>"+"2.25= "+ n+"</h1>";
+n=(x-x%100)/100+(x%100*10)
+document.getElementById("b").innerHTML ="<h1>"+"2.27= "+ n+"</h1>";
+n=(n%100-n%10)*100+((n-n%100*10)+n%10)
+document.getElementById("c").innerHTML ="<h1>"+"2.29= "+ n+"</h1>";
+n=(n%100-n%10)+(n-((n%100-n%10)*10)+n%10)
+document.getElementById("d").innerHTML ="<h1>"+"2.31= "+ n+"</h1>";
+n=(n%10)*100+((n-n%10)/10)
+document.getElementById("e").innerHTML ="<h1>"+"2.33= "+ n+"</h1>";
+}">тень CSS</p>
 </div>
 
 
