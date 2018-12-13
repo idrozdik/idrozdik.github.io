@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>2.25= 900
+2.27= 90
+2.29= 8190
+2.31= 7380
+2.33= 7
+  <title>kaktotakoioi</title>
+  <style>
+    p {background-color: #000;
+        padding:90px 0 0;
+        margin: 20px auto;
+        font-family: Arial;
+        font-size: 200px; 
+        text-transform: uppercase; 
+        color: #fff;
+        text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;}
+   </style>
+</head>
+<body>
+<nav role="navigation">
+<ul>
+<html>
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=windows-1251">
+<title>Стили</title>
+</head>
+<script>
+function func(){
+x=document.getElementById("a_znach").value;
+n=(x-x%10)/10+(x%10)*100
+document.getElementById("a").innerHTML ="<h1>"+"2.25= "+ n+"</h1>";
+n=(x-x%100)/100+(x%100*10)
+document.getElementById("b").innerHTML ="<h1>"+"2.27= "+ n+"</h1>";
+n=(n%100-n%10)*100+((n-n%100*10)+n%10)
+document.getElementById("c").innerHTML ="<h1>"+"2.29= "+ n+"</h1>";
+n=(n%100-n%10)+(n-((n%100-n%10)*10)+n%10)
+document.getElementById("d").innerHTML ="<h1>"+"2.31= "+ n+"</h1>";
+n=(n%10)*100+((n-n%10)/10)
+document.getElementById("e").innerHTML ="<h1>"+"2.33= "+ n+"</h1>";
+}
+</script>
+_________________________________________
+<br>
+
+<br>
+n=<input type="text" value="0" id="a_znach">
+<br>
+<br>
+<button onclick="func()">Надо нажать</button>
+<br>
+<br>
+<div id="a"></div>
+<div id="b"></div>
+<div id="c"></div>
+<div id="d"></div>
+<div id="e"></div>
+
+</body>
+</html>
