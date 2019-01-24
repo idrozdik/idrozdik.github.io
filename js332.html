@@ -1,9 +1,7 @@
 
 <html>
 <head>
-  
-
-<title>canvasExample</title>
+  <title>canvasExample</title>
 <meta charset='utf-8' />
 <style>
 a.button.purple {
@@ -145,7 +143,6 @@ ctx.stroke();
 ctx.rect(330,250, 20, 10);
 ctx.fillStyle = 'orange';
 ctx.fill();
-
 }
 function er8(){
 var canvas = document.getElementById('example');
@@ -157,15 +154,29 @@ ctx.moveTo(0, 240);
 ctx.lineTo(640, 240);
 ctx.stroke();
 ctx.rect(0, 225, 640, 10);
-ctx.fillStyle = 'pink';
+ctx.fillStyle = 'red';
 ctx.fill();
 ctx.rect(340, 0, 300,480);
-ctx.fillStyle = 'pink';
+ctx.fillStyle = 'red';
 ctx.fill();
 }
-</script>
-</head>
-<body>
+function drawpoint() { 
+x=Number(document.getElementById("x_znach").value); 
+y=Number(document.getElementById("y_znach").value); 
+x=320+x*10; 
+y=240-y*10; 
+var canvas = document.getElementById('example'); 
+var ctx = canvas.getContext('2d'); 
+ctx.beginPath(); 
+ctx.strokeStyle = 'green'; 
+ctx.arc(x, y, 2, 0, 2 * Math.PI); 
+ctx.stroke(); 
+} 
+</script> 
+</head> 
+<body> 
+x=<input type="text" value="0" id="x_znach"> 
+y=<input type="text" value="0" id="y_znach">
 <a href="#" onclick="clean()" class="button green">Очистить</a>
 <a href="#" onclick="er1()" class="button green">A</a>
 <a href="#" onclick="er2()" class="button green">B</a>
