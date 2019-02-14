@@ -76,6 +76,3 @@ y=<input type="text" value="0" id="y_znach">
 <br> 
 <canvas width='640' height='480' id='example'>Обновите браузер</canvas> 
 <br> 
-
-<div id="otvet"></div>
-</body> 
