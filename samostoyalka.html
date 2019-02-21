@@ -1,7 +1,7 @@
 <!doctype html> 
 <html> 
 <head> 
-<title>canvasExample</title> 
+<title>самостоялка</title> 
 <meta charset='utf-8' /> 
 <style> 
 a.button.purple { 
@@ -36,34 +36,46 @@ var canvas = document.getElementById('example');
 var ctx = canvas.getContext('2d'); 
 ctx.fillStyle = "white"; 
 ctx.fillRect(0, 0, 640, 480); 
-ctx.closePath(); 
 } 
 function er1(){ 
 var canvas = document.getElementById('example'); 
-var ctx = canvas.getContext('2d'); 
+var ctx=canvas.getContext("2d"); 
 ctx.beginPath(); 
+drawpoint(); 
+ctx.stroke (); 
+ctx.beginPath(); 
+ctx.arc(320, 240, 140, 0, 2 * Math.PI); 
 ctx.moveTo(320, 0); 
 ctx.lineTo(320, 480); 
 ctx.moveTo(0, 240); 
 ctx.lineTo(640, 240); 
-ctx.arc(100, 100, 75, 0, getRadians(180));
-ctx.stroke();
-
-
-
-
+ctx.moveTo(700,100); 
+ctx.lineTo(0, 100); 
+ctx.moveTo(0, 380); 
+ctx.lineTo(700,380); 
+ctx.moveTo(180, 100); 
+ctx.lineTo(180,380); 
+ctx.stroke (); 
+x=Number(document.getElementById("x_znach").value); 
+y=Number(document.getElementById("y_znach").value); 
+if (((x >= -1) && (x<= 1) && (y>=-9)) && ((x >= -5) && (x<= 5) && (y<=9))) { 
+document.getElementById("otvet").innerHTML = "Точка в области"; 
+} else { 
+document.getElementById("otvet").innerHTML = "Точка не в области"; 
+}
+} 
 function drawpoint() { 
 x=Number(document.getElementById("x_znach").value); 
 y=Number(document.getElementById("y_znach").value); 
-x=320+x*10; 
-y=240-y*10; 
+x=320+x; 
+y=240-y; 
 var canvas = document.getElementById('example'); 
 var ctx = canvas.getContext('2d'); 
 ctx.beginPath(); 
 ctx.strokeStyle = 'green'; 
 ctx.arc(x, y, 2, 0, 2 * Math.PI); 
 ctx.stroke(); 
-} 
+}
 
 </script> 
 </head> 
@@ -71,8 +83,12 @@ ctx.stroke();
 x=<input type="text" value="0" id="x_znach"> 
 y=<input type="text" value="0" id="y_znach"> 
 <a href="#" onclick="clean()" class="button purple">Очистить</a> 
-<a href="#" onclick="er1()" class="button purple">кнопка</a> 
-
+<a href="#" onclick="er1()" class="button purple">проверить</a> 
 <br> 
 <canvas width='640' height='480' id='example'>Обновите браузер</canvas> 
 <br> 
+
+<br> 
+
+<div id="otvet"></div> 
+</html>
