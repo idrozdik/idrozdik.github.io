@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Christmas Button</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+  <script>
+    function func1() {
+      document.getElementById("otvet1").innerHTML ="";
+      n = Number(document.getElementById("n_f1_znach").value);
+      var i = 20;
+      while (i < n) {
+        document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML + i + "<br>";
+        i++;
+      }
+    }
+    function func2() {
+      document.getElementById("otvet2").innerHTML ="";
+      n = Number(document.getElementById("n_f2_znach").value);
+      var i = 10;
+      while (i < n) {
+        document.getElementById("otvet2").innerHTML = document.getElementById("otvet2").innerHTML + i*i + "<br>";
+        i++;
+      }
+    }
+    function func3() {
+      document.getElementById("otvet3").innerHTML ="";
+      var a = Number(document.getElementById("n_f3_znach").value);
+     do {
+        document.getElementById("otvet3").innerHTML = document.getElementById("otvet3").innerHTML + a*a*a + "<br>";
+        a++;
+        } while (a < 50)
+  }
+     function func4() {
+       document.getElementById("otvet4").innerHTML ="";
+      var a = Number(document.getElementById("n_f4_znach").value);
+      var b = Number(document.getElementById("m_f4_znach").value);
+      do {
+        document.getElementById("otvet4").innerHTML = document.getElementById("otvet4").innerHTML + a + "<br>";
+        a++;
+        } while (a <= b)
+      }
+      
+    
+  </script>
+</head>
+
+<body>
+
+
+  a)<div class='buttons'>
+      <a href='#' title='Title 1' onclick="func1()" >
+        &#x2606;
+      </a>
+      </div>  йоу </a>n=
+  <input type="text" value="36" id="n_f1_znach">
+
+  <div id="otvet1"></div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  б) n=
+  <input type="text" value="0" id="n_f2_znach">
+<div class='buttons'>
+      <a href='#' title='Title 2' onclick="func2()" >
+        &#x2606;
+      </a>
+      </div> всем </a>
+  <div id="otvet2"></div>
+    <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  в) n=
+  <input type="text" value="0" id="n_f3_znach">
+ <div class='buttons'>
+      <a href='#' title='Title 3' onclick="func3()" >
+        &#x2606;
+      </a>
+      </div> из </a>
+  <div id="otvet3"></div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  г) n=
+  <input type="text" value="0" id="n_f4_znach">
+  m=
+  <input type="text" value="0" id="m_f4_znach">
+ <div class='buttons'>
+      <a href='#' title='Title 4' onclick="func4()" >
+        &#x2606;
+      </a>
+      </div> пяти семи </a>
+  <div id="otvet4"></div>
+
+<br>
+  <br>
+  <br>
+  <br>
+</body>
+</html>
